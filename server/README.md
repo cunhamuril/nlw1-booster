@@ -10,6 +10,8 @@ Back-end do App Booster
 - typescript
 - ts-node
 - ts-node-dev <small><small>(Igual ao nodemon)</small></small>
+- knex
+- sqlite3
 
 ### 👨‍💻 Uso
 
@@ -33,4 +35,30 @@ yarn ts-node-dev src/server.ts
 # ou simplesmente
 
 yarn dev
+```
+
+### 💾 Banco de Dados
+
+[Aqui estão as entidades da aplicação](docs/db_entities.md)
+
+O banco de dados escolhido é o SQLite, utilizando Query Builder Knex.
+
+#### Uso do Knex
+
+Criar knexfile.ts (arquivo de configuração do Knex em TypeScript):
+
+```bash
+yarn knex init -x ts
+```
+
+Criar migrations em arquivos TypeScript:
+
+```bash
+yarn knex migrate:make migration_name -x ts
+```
+
+Criar banco de dados e tabelas utilizando migrations:
+
+```bash
+yarn knex migrate:latest
 ```

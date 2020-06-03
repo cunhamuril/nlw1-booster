@@ -2,6 +2,6 @@
 
 Aplicativo de coleta de resíduos
 
-## [Back-end](server/README.md)
+### [Back-end](server/README.md)
 
-## [Front-end](web/README.md)
+### [Front-end](web/README.md)
