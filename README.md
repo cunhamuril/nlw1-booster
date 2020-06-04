@@ -1,6 +1,8 @@
-# 🚀 Rocketseat Next Level Week #1 - App Booster
+<img src="web/src/assets/logo.svg" alt="Ecoleta Logo" width="100%"/>
 
-Aplicativo de coleta de resíduos
+# 🚀 Rocketseat Next Level Week #1 - App Ecoleta
+
+Sistema de marketplace que tem como objetivo cadastrar pontos de coletas de diferentes tipos de resíduos e ajudar pessoas a encontrar esses pontos de forma eficiente.
 
 ### [Back-end](server/README.md)
 
