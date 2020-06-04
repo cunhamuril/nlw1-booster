@@ -17,7 +17,7 @@ class ItemsController {
       };
     });
 
-    return res.json(serializedItems);
+    return res.json({ success: true, items: serializedItems });
   }
 }
 
