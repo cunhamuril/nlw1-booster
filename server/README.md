@@ -98,3 +98,8 @@ O banco de dados escolhido é o SQLite, utilizando Query Builder Knex.
   ```
 
 ### 🌐 Endpoints
+
+#### `/items`
+
+- Função: Listar todos os items de coleta
+- Método: `GET`
