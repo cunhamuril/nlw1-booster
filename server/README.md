@@ -125,6 +125,18 @@ O banco de dados escolhido é o SQLite, utilizando Query Builder Knex.
 - Resposta de sucesso:
   ```json
   {
-    "success": true
+    "success": true,
+    "point": {
+      "id": 4,
+      "image": "image-fake",
+      "name": "Mercado Legal",
+      "email": "contato@legal.com.br",
+      "whatsapp": "15988885555",
+      "latitude": -46.81273213,
+      "longitude": -35.19238112,
+      "city": "Guareí",
+      "uf": "SP",
+      "items": [1, 2, 6]
+    }
   }
   ```
