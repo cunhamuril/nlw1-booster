@@ -21,6 +21,7 @@ Back-end do App Ecoleta
 - ts-node-dev <small><small>(Igual ao nodemon)</small></small>
 - knex
 - sqlite3
+- cors | @types/cors
 
 ### 👨‍💻 Uso
 

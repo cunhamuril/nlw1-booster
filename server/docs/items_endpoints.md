@@ -1,6 +1,6 @@
 # Items Endpoints
 
-#### `/items`
+## `/items`
 
 - Função: Listar todos os items de coleta
 - Método: `GET`

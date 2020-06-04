@@ -3,6 +3,31 @@ import { Request, Response } from "express";
 import knex from "../database/connection";
 
 class PointsController {
+  async index(req: Request, res: Response) {
+    const { city, uf, items } = req.query;
+
+    // Vai retornar um array de números
+    const parsedItems = String(items)
+      .split(",")
+      .map((item) => Number(item.trim()));
+
+    const points = await knex("points")
+      .join("point_items", "points.id", "=", "point_items.point_id")
+      .whereIn("point_items.item_id", parsedItems) // whereIn: que tem dentro do array, se tem pelo menos um dos números do array
+      .where("city", String(city))
+      .where("uf", String(uf))
+      .distinct() // distinct: se um ponto tem 2 tipos de itens, vai retornar apenas um ponto distinto
+      .select("points.*");
+
+    if (points.length === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Point not found" });
+    }
+
+    return res.json({ success: true, points });
+  }
+
   async show(req: Request, res: Response) {
     const { id } = req.params;
 
@@ -64,6 +89,11 @@ class PointsController {
     }));
 
     await trx("point_items").insert(pointItems);
+
+    /**
+     * IMPORTANTE! Sem este commit, o Knex não vai realizar a query
+     */
+    await trx.commit();
 
     return res.json({
       success: true,
