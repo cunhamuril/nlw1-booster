@@ -9,5 +9,7 @@ Front-end do App Booster
 ### 📚 Bibliotecas utilizadas
 
 - styled-components / @types/styled-components
+- react-icons
+- react-router-dom / @types/react-router-dom
 
 ### 👨‍💻 Uso

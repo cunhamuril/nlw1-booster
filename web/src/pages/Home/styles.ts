@@ -8,7 +8,7 @@ import { colors } from "../../theme";
 export const Container = styled.div`
   height: 100vh;
 
-  background: url(${backgroundImg}) no-repeat 600px bottom;
+  background: url(${backgroundImg}) no-repeat 700px bottom;
 `;
 
 export const Content = styled.div`
