@@ -68,41 +68,17 @@ export const Container = styled.div`
       }
     }
 
-    .field-group {
+    .field {
       flex: 1;
+
       display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
 
-      .field {
-        flex: 1;
-
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-
-        input {
-          [type="text"],
-          [type="email"],
-          [type="number"] {
-            flex: 1;
-            background: #f0f0f5;
-            border-radius: 8px;
-            border: 0;
-            padding: 16px 24px;
-            font-size: 16px;
-            color: #6c6c80;
-          }
-
-          ::placeholder {
-            color: #a0a0b2;
-          }
-
-          + input {
-            margin-left: 24px;
-          }
-        }
-
-        select {
-          appearance: none;
+      input {
+        &[type="text"],
+        &[type="email"],
+        &[type="number"] {
           flex: 1;
           background: #f0f0f5;
           border-radius: 8px;
@@ -112,31 +88,55 @@ export const Container = styled.div`
           color: #6c6c80;
         }
 
-        label {
-          font-size: 14px;
-          margin-bottom: 8px;
+        &::placeholder {
+          color: #a0a0b2;
         }
 
-        :disabled {
-          cursor: not-allowed;
-        }
-
-        + .field {
+        & + input {
           margin-left: 24px;
         }
       }
 
-      .field-check {
-        flex-direction: row;
-        align-items: center;
+      select {
+        appearance: none;
+        flex: 1;
+        background: #f0f0f5;
+        border-radius: 8px;
+        border: 0;
+        padding: 16px 24px;
+        font-size: 16px;
+        color: #6c6c80;
+      }
 
-        input[type="checkbox"] {
-          background: #f0f0f5;
-        }
+      label {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
 
-        label {
-          margin: 0 0 0 8px;
-        }
+      :disabled {
+        cursor: not-allowed;
+      }
+
+      + .field {
+        margin-left: 24px;
+      }
+    }
+
+    .field-group {
+      flex: 1;
+      display: flex;
+    }
+
+    .field-check {
+      flex-direction: row;
+      align-items: center;
+
+      input[type="checkbox"] {
+        background: #f0f0f5;
+      }
+
+      label {
+        margin: 0 0 0 8px;
       }
     }
 
@@ -168,7 +168,7 @@ export const Container = styled.div`
   }
 `;
 
-export const itemsGrid = styled.div`
+export const ItemsGrid = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
