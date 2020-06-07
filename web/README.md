@@ -13,5 +13,6 @@ Front-end do App Booster
 - react-router-dom
 - leaflet
 - react-leaflet
+- axios
 
 ### 👨‍💻 Uso

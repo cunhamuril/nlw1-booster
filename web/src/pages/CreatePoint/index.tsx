@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { Map, TileLayer, Marker } from "react-leaflet";
+
+import api from "../../services/api";
 
 import logo from "../../assets/logo.svg";
 
 import { Container, ItemsGrid } from "./styles";
 
+// array ou objeto: manualmente informar o tipo de variável
+interface Item {
+  id: number;
+  title: string;
+  image_url: string;
+}
+
 const CreatePoint = () => {
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    api.get("items").then((res) => {
+      setItems(res.data.items);
+    });
+  }, []);
+
   return (
     <Container>
       <header>
@@ -84,30 +101,12 @@ const CreatePoint = () => {
           </legend>
 
           <ItemsGrid>
-            <li className="selected">
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
+            {items.map((item) => (
+              <li key={item.id}>
+                <img src={item.image_url} alt="Teste" />
+                <span>{item.title}</span>
+              </li>
+            ))}
           </ItemsGrid>
         </fieldset>
 
