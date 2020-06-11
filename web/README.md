@@ -4,11 +4,9 @@
 
 Front-end do App Booster
 
-<center>
-  <img src="../docs/print-frontend1.png" alt="Front-end 1" width="75%"/>
-  <img src="../docs/print-frontend2.png" alt="Front-end 2" width="75%"/>
-  <img src="../docs/print-frontend3.png" alt="Front-end 3" width="75%"/>
-</center>
+![Frontend 1](../docs/print-frontend1.png)
+![Frontend 2](../docs/print-frontend2.png)
+![Frontend 3](../docs/print-frontend3.png)
 
 ### 👨‍💻 Uso
 

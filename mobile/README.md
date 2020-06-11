@@ -13,3 +13,11 @@ Versão mobile do App Booster desenvolvido com React Native e Expo
 
 - expo-font
 - expo-google-fonts
+- @react-navigation
+  - /native
+  - /stack
+  - react-native-gesture-handler
+  - react-native-reanimated
+  - react-native-screens
+  - react-native-safe-area-context
+  - @react-native-community/masked-view

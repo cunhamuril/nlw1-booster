@@ -6,6 +6,8 @@
 
 Sistema de marketplace que tem como objetivo cadastrar pontos de coletas de diferentes tipos de resíduos e ajudar pessoas a encontrar esses pontos de forma eficiente.
 
-### [Back-end](server/README.md)
+### [Back-end](server)
 
-### [Front-end](web/README.md)
+### [Front-end](web)
+
+### [Mobile](mobile)
