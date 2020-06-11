@@ -4,9 +4,9 @@
 
 Versão mobile do App Booster desenvolvido com React Native e Expo
 
-<img src="../docs/print-mobile1.jpeg" alt="Print mobile 1" width="33%"/>
-<img src="../docs/print-mobile2.jpeg" alt="Print mobile 2" width="33%"/>
-<img src="../docs/print-mobile3.jpeg" alt="Print mobile 3" width="33%"/>
+<img src="../docs/print-mobile1.jpeg" alt="Print mobile 1" width="32%"/>
+<img src="../docs/print-mobile2.jpeg" alt="Print mobile 2" width="32%"/>
+<img src="../docs/print-mobile3.jpeg" alt="Print mobile 3" width="32%"/>
 
 ### 👨‍💻 Uso
 
