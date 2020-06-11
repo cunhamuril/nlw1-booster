@@ -7,7 +7,7 @@ Versão mobile do App Booster desenvolvido com React Native e Expo
 ### 👨‍💻 Uso
 
 - Executar `yarn` para instalar as dependências;
-- Executar `expo start` para iniciar o servidor de desenvolvimento na porta 3000;
+- Executar `expo start` para iniciar o servidor de desenvolvimento na porta 3000.
 
 ### 📚 Bibliotecas utilizadas
 
@@ -21,3 +21,6 @@ Versão mobile do App Booster desenvolvido com React Native e Expo
   - react-native-screens
   - react-native-safe-area-context
   - @react-native-community/masked-view
+- react-native-maps
+- expo-constants
+- react-native-svg
