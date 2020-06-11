@@ -28,7 +28,7 @@ Back-end do App Ecoleta
 ### 👨‍💻 Uso
 
 - Executar `yarn` para instalar as dependências;
-- Executar `yarn knex:migrate` para criar tabelas do banco de dados;
+- Executar `yarn knex migrate:latest` para criar tabelas do banco de dados;
 - Executar `yarn knex:seed` para popular tabela "items" do banco de dados;
 - Executar `yarn dev` para iniciar o servidor em modo de desenvolvimento na porta 3333;
   <br/>
