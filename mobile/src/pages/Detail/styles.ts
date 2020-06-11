@@ -4,12 +4,12 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     padding: 32,
-    paddingTop: 20,
+    paddingTop: 40,
   },
 
   pointImage: {
     width: "100%",
-    height: 120,
+    height: 220,
     resizeMode: "cover",
     borderRadius: 10,
     marginTop: 32,
