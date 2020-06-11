@@ -1,4 +1,6 @@
-<img src="../web/src/assets/logo.svg" alt="Ecoleta Logo" width="100%"/>
+<center>
+  <img src="../web/src/assets/logo.svg" alt="Ecoleta Logo" width="20%"/>
+</center>
 
 # 🚀 Rocketseat Next Level Week #1 - App Ecoleta (Back-end)
 
