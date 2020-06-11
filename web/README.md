@@ -8,6 +8,10 @@ Front-end do App Booster
 ![Frontend 2](../docs/print-frontend2.png)
 ![Frontend 3](../docs/print-frontend3.png)
 
+### 💻 Funcionalidades
+
+- Cadastrar pontos de coleta
+
 ### 👨‍💻 Uso
 
 - Executar `yarn` para instalar as dependências;

@@ -6,6 +6,12 @@ Versão mobile do App Booster desenvolvido com React Native e Expo
 
 <img src="../docs/print-mobile1.jpeg" alt="Print mobile 1" width="33%"/> <img src="../docs/print-mobile2.jpeg" alt="Print mobile 2" width="33%"/> <img src="../docs/print-mobile3.jpeg" alt="Print mobile 3" width="33%"/>
 
+### 💻 Funcionalidades
+
+- Listar pontos de coleta (filtro por estado/cidade/itens)
+- Listar um ponto de coleta específico
+- Comunicar com ponto de coleta
+
 ### 👨‍💻 Uso
 
 - Executar `yarn` para instalar as dependências;
