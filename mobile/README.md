@@ -24,3 +24,4 @@ Versão mobile do App Booster desenvolvido com React Native e Expo
 - react-native-maps
 - expo-constants
 - react-native-svg
+- axios
