@@ -17,13 +17,14 @@ Back-end do App Ecoleta
 
 ### 📚 Bibliotecas utilizadas
 
-- express | @types/express
+- express
 - typescript
 - ts-node
 - ts-node-dev <small><small>(Igual ao nodemon)</small></small>
 - knex
 - sqlite3
-- cors | @types/cors
+- cors
+- multer
 
 ### 👨‍💻 Uso
 

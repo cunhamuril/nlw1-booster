@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 
 import knex from "../database/connection";
+import serializedFile from "../utils/serializedFile";
 
 class PointsController {
   async index(req: Request, res: Response) {
@@ -25,7 +26,14 @@ class PointsController {
         .json({ success: false, message: "Point not found" });
     }
 
-    return res.json({ success: true, points });
+    const serializedPoints = points.map((point) => {
+      return {
+        ...points,
+        image_url: serializedFile(point.image),
+      };
+    });
+
+    return res.json({ success: true, points: serializedPoints });
   }
 
   async show(req: Request, res: Response) {
@@ -49,9 +57,14 @@ class PointsController {
       .where("point_items.point_id", id)
       .select("items.title");
 
+    const serializedPoint = {
+      ...point,
+      image_url: serializedFile(point.image),
+    };
+
     return res.json({
       success: true,
-      point: { ...point, items },
+      point: { ...serializedPoint, items },
     });
   }
 
@@ -71,8 +84,7 @@ class PointsController {
     const trx = await knex.transaction();
 
     const point = {
-      image:
-        "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      image: req.file.filename,
       name,
       email,
       whatsapp,
@@ -84,10 +96,14 @@ class PointsController {
 
     const [point_id] = await trx("points").insert(point);
 
-    const pointItems = items.map((item_id: number) => ({
-      item_id,
-      point_id,
-    }));
+    // Agora não é mais um array que é enviado, então precisa enviar os dados separado por vírgula
+    const pointItems = items
+      .split(",")
+      .map((item: string) => Number(item.trim()))
+      .map((item_id: number) => ({
+        item_id,
+        point_id,
+      }));
 
     await trx("point_items").insert(pointItems);
 

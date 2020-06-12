@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 
 import knex from "../database/connection";
+import serializedFile from "../utils/serializedFile";
 
 class ItemsController {
   async index(req: Request, res: Response) {
@@ -13,7 +14,7 @@ class ItemsController {
       return {
         id,
         title,
-        image_url: `http://192.168.0.103:3333/uploads/${image}`,
+        image_url: serializedFile(image),
       };
     });
 
