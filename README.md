@@ -11,3 +11,7 @@ Sistema de marketplace que tem como objetivo cadastrar pontos de coletas de dife
 ### [Front-end](web)
 
 ### [Mobile](mobile)
+
+# 📝 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
