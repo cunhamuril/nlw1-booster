@@ -23,6 +23,7 @@ interface Params {
 
 interface Data {
   image: string;
+  image_url: string;
   name: string;
   email: string;
   whatsapp: string;
@@ -77,15 +78,7 @@ const Detail: React.FC = () => {
           <Icon name="arrow-left" size={20} color="#34cb79" />
         </TouchableOpacity>
 
-        <Image
-          style={styles.pointImage}
-          source={{
-            uri:
-              data.image === "image-fake"
-                ? "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-                : data.image,
-          }}
-        />
+        <Image style={styles.pointImage} source={{ uri: data.image_url }} />
 
         <Text style={styles.pointName}>{data.name}</Text>
         <Text style={styles.pointItems}>
