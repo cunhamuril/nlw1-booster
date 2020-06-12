@@ -25,3 +25,4 @@ Front-end do App Booster
 - leaflet
 - react-leaflet
 - axios
+- react-dropzone
